@@ -1,0 +1,29 @@
+/* RESET */ 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* COLORS */ 
+ $primary: #9ed5ff; 
+ $hover: #72e5ff; 
+ $secondary: #353535;
+ $intro-bg: #eff4ff;
+ $features-bg: #ff0f0f;
+ $third: rgb(215, 229, 255);
+ $title: #5257da;
+
+/* DEVICE */
+
+@mixin tablet {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media screen and (min-width: 320px) and (max-width: 580px) {
+        @content;
+    }
+}

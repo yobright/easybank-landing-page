@@ -1,1 +1,280 @@
 @import "resets", "animations", "fonts"; 
+
+body {
+    font-family: 'Syne';
+    font-size: 1.2rem;
+    line-height: 1.4;
+    
+    @include mobile {
+        font-size: 1.2rem;
+    }
+
+    
+}
+
+a {
+    text-decoration: none;
+    color: $secondary;
+}
+
+li {
+    list-style: none;
+}
+
+
+.request-invite {
+    font-family: 'Syne';
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 70px;
+    border: none;
+    background-color: $primary;
+
+    @include mobile {
+        display: none;
+    }
+
+    &:hover {
+        background-color: $hover;
+        
+    }
+}
+
+/* ------------------- */ 
+
+.header {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+    background-color: $third;
+    padding: 0 20px;
+    
+
+    @include mobile {
+
+    }
+
+
+    ul {
+        display: flex;
+        @include mobile {
+            display: none;
+        }
+        
+        a {
+            margin-right: 20px;
+            &:hover {
+                padding-bottom: 8px;
+                border-bottom: 3px solid $hover;
+            }
+        }
+    }
+
+}
+
+.intro {
+    display: flex;
+    z-index: -3;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: $intro-bg;
+    height: 560px;
+    padding-top: 50px;
+    overflow: hidden;
+    
+    
+    .main {
+        
+        margin: 40px auto;
+        max-width: 500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        
+
+        h1 {
+            font-weight: 800;
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+            color: $title;
+            &:hover {
+                color: #0300c9;
+            }
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        width: 500px;
+        margin: 0 auto;
+        z-index: 2;
+       
+        
+        @media (max-width: 1000px) {
+            .bg {
+                width: 50px;
+                margin: 0 auto;
+                
+            }
+        }
+    }
+    
+    
+
+   
+      
+}
+
+.features {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    font-size: 1.2rem; 
+    background-color: #ffffff;
+
+
+    .features-intro {
+        width: 50vw;
+        margin-left: 80px;
+        
+        
+        h2 {
+            font-size: 3rem;
+            color: $title;
+            &:hover {
+                color: $hover;
+            }
+        }
+        p {
+            font-size: 1.6rem;
+        }
+    }
+    
+    .features-cards {
+        display: flex;
+        flex-direction: row;
+        margin: 30px auto;
+        justify-content: center;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-radius: 4px; 
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(183, 193, 247, 0.439);
+            
+            &:hover {
+                background-color: rgba(52, 110, 255, 0.439);
+
+                h2 {
+                    color: #020074;
+                }
+            }
+
+            h2 {
+                line-height: 1;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                color: $title;
+                
+                
+            }
+        }
+        
+        
+    }
+}
+
+.articles {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    overflow: hidden;
+   
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 3rem;
+        color: $title;
+        &:hover {
+            color: $hover;
+        }
+    }
+
+    .articles-cards {
+        display: flex;
+
+        .article-card {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px;
+
+            img {
+                width: 200px;
+                height: 150px;
+                margin-bottom: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 90px;
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    .footer-left {
+        text-align: center;
+        .social-media {
+            img {
+                margin-left: 10px; 
+            }
+        }
+    }
+    .footer-nav {
+        
+       ul {
+        display: flex;
+        
+        li {
+            margin-left: 20px;
+        }
+        a {
+            color: #5257da;
+
+            &:hover {
+                color: $hover;
+            }
+        }
+       }
+    }
+
+}
